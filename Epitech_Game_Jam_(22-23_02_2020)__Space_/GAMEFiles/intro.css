@@ -1,0 +1,89 @@
+body {
+    background-color:white;
+    background-image:url("Images/prologue.png");
+    background-repeat:no-repeat;
+    font-family: 'Poiret One';
+    background-attachment: fixed;
+    font-size: 5px;
+    z-index: -1;
+    background-size: 100% 100%;
+}
+
+h1 {
+    font-size: 100px;
+    margin: 0px;
+    text-align: center;
+    color: white;
+}
+
+html{overflow:hidden}
+	
+#container
+{
+	font-size:24px;
+	margin: 0, auto;
+	padding:10px 500px;
+	width:800px;
+	position:relative;
+	text-align:center;
+	color:white;
+	height:100%;
+}
+
+#container2
+{
+	font-size:24px;
+	margin: 20px;
+	padding:10px 100px;
+	width:800px;
+	position:relative;
+	text-align:center;
+	color:white;
+	height:100%;
+}
+
+a.button {
+    font-size: 30px;
+	text-decoration: none;
+	color:rgb(245, 245, 248);
+	display:inline-block;
+	margin: 5px;
+	padding:5px 100px;
+	border:3px solid rgb(243, 245, 247);
+	border-radius:100px;
+}
+
+a.button:hover
+{
+	text-shadow:0px 0px 8px white;
+	background:rgba(151, 128, 255, 0.4);
+}
+
+a.button2 {
+    font-size: 30px;
+	text-decoration: none;
+	color:rgb(245, 245, 248);
+	display:inline-block;
+	margin: 5px;
+	padding:5px 100px;
+	border:3px solid rgb(243, 245, 247);
+	border-radius:100px;
+}
+
+a.button2:hover
+{
+	text-shadow:0px 0px 8px white;
+	background:rgba(151, 128, 255, 0.4);
+}
+
+#containerChoice
+{
+	font-size:24px;
+	margin: 600px auto;
+	padding:10px 50px;
+	width:800px;
+	position:relative;
+	text-align:center;
+	color:white;
+	height:100%;
+}

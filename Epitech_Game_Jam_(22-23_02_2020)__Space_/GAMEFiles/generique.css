@@ -1,0 +1,65 @@
+body {
+    background-color:white;
+    background-image:url("Images/prologue.png");
+    background-repeat:no-repeat;
+    font-family: 'Poiret One';
+    background-attachment: fixed;
+    font-size: 5px;
+    animation:animback 5s infinite;
+    z-index: -1;
+    background-size: 100% 100%;
+}
+
+@font-face {
+    font-family: 'space';
+    src: url('space.ttf');
+}
+
+html{overflow:hidden}
+
+h1 {
+    font-size: 40px;
+
+    text-align: center;
+    color: white;
+}
+
+#third
+{
+	font-size: 25px;
+}
+
+#first
+{
+	margin: 0 auto;
+	text-align:center;
+	color:gold;
+}
+
+#container
+{
+	font-size:24px;
+	margin: 0 auto;
+	width:800px;
+	position: absolute;
+	color:white;
+	height:100%;
+}
+
+a.button {
+    font-size: 30px;
+	text-decoration: none;
+	color:rgb(245, 245, 248);
+    display:inline-block;
+    
+	margin: 5px;
+	padding:5px 100px;
+	border:3px solid rgb(243, 245, 247);
+	border-radius:100px;
+}
+
+a.button:hover
+{
+	text-shadow:0px 0px 8px white;
+	background:rgba(151, 128, 255, 0.4);
+}

@@ -1,0 +1,157 @@
+<html lang="fr">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <link href="game.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Moi, Héros-kun quand je me fais kidnapper par des hommes bâtons colonisateur alors que je suis un gars lambda</title>
+
+</head>
+
+<body style="background-image: url('Images/ship.png');">
+    <audio autoplay loop id="playAudio">
+            <source src="Audio/cipher.mp3">
+        </audio>
+    <!-- Séquence 4 choix player-->
+
+    <!-- personage sur l'écran à gauche ou a droite-->
+    <img id="Position_gauche" hidden="true" style="position: absolute; width: 15%; margin-right: 100px; top: 100px; left:150px; z-index: 0;" src="">
+    <img id="Position_droite" hidden="true" style="position: absolute; width: 15%; margin-right: 100px; top: 100px; right:150px; z-index: 0;" src="">
+
+
+    <div onclick="Game()" class="fixed-bottom" id="dialogDiv">
+        <img id="icone" style="margin-left: 100px; margin-top: 115px; width: 200px; height: 200px; position: absolute;" src="Images/Personage/Nathan_peur.png">
+        </img>
+        <p id="nom" style="color:black; position: absolute; left:20%; top:24%; z-index:200">
+                Héros-kun
+        </p>
+        <p id="texte_area" style="text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px; position: absolute; left:30%; top:44%; z-index:200">
+            HO BORDEL JE SUIS OÙ LA ?!!
+        </p>
+    </div>
+</body>
+
+<script>
+    var Séquence = 6;
+    function Game() {
+        if (Séquence == 6) {
+            document.getElementById('Position_droite').hidden = false
+            document.getElementById('Position_droite').src = "Images/Personage/Capitaine_Stickgloo_normal.png"
+            document.getElementById('texte_area').innerHTML = "ET VOUS VOUS ETES QUI ? DES ALIENS ? VOUS ALLEZ ME METTRE DES SONDES DANS LE C..";
+        }
+        if (Séquence == 7) {
+            document.getElementById('nom').innerHTML = "Capitaine Stickgloo";
+            document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+            document.getElementById('Position_droite').src = "Images/Personage/Capitaine_Stickgloo_venere.png"
+            document.getElementById('texte_area').innerHTML = "Calmez vous ! Nous ne vous enfoncerons rien du tout dans je ne sais quel orifice.";
+            document.getElementById('texte_area').style.color = "blue";
+            document.getElementById('texte_area').style.fontSize = "50px";
+            document.getElementById('Position_droite').style.width = "50%";
+        }
+        if (Séquence == 8) {
+            document.getElementById('Position_droite').src = "Images/Personage/Capitaine_Stickgloo_normal.png"
+            document.getElementById('texte_area').innerHTML = "Laissez moi d'abord me présenter. Je suis le Capitaine Stickgloo, de la race des Stickman.";
+            document.getElementById('Position_droite').style.width = "30%";
+            document.getElementById('texte_area').style.fontSize = "30px";
+        }
+        if (Séquence == 9) {
+            document.getElementById('icone').src = "Images/Personage/Nathan_perdu.png"
+            document.getElementById('texte_area').innerHTML = "Les Stickman ?";
+            document.getElementById('texte_area').style.color = "darkred";
+            document.getElementById('nom').innerHTML = "Héros-kun";
+        }
+        if (Séquence == 10) {
+            document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+            document.getElementById('texte_area').innerHTML = "C'est exact. Nous venons de la planète 0q1_budj&.";
+            document.getElementById('texte_area').style.color = "blue";
+            document.getElementById('nom').innerHTML = "Capitaine Stickgloo";
+        }
+        if (Séquence == 11) {
+            document.getElementById('texte_area').innerHTML = "Mais trêve de mondanités revenons au sujet que je voulais aborder. Vous avez été choisi afin de servir de sujet d'exposition dans notre école d’annexion impérial des peuples inférieur. Vous y vivrez comme un étudiant lambda...";
+        }
+        if (Séquence == 12) {
+            document.getElementById('icone').src = "Images/Personage/Nathan.png"
+            document.getElementById('icone').style.witdh="280px";
+            document.getElementById('icone').style.height="280px";
+            document.getElementById('icone').style.marginLeft="100px";
+            document.getElementById('icone').style.marginTop="115px";
+            document.getElementById('texte_area').innerHTML = "Comme d'habitude quoi.";
+            document.getElementById('texte_area').style.color = "darkred";
+            document.getElementById('nom').innerHTML = "Héros-kun";
+        }
+        if (Séquence == 13) {
+            document.getElementById('nom').innerHTML = "Capitaine Stickgloo";
+            document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+            document.getElementById('Position_droite').src = "Images/Personage/Capitaine_Stickgloo_venere.png"
+            document.getElementById('texte_area').innerHTML = "LAISSEZ MOI FINIR !";
+            document.getElementById('texte_area').style.color = "blue";
+            document.getElementById('texte_area').style.fontSize = "50px";
+            document.getElementById('Position_droite').style.width = "50%";
+        }
+        if (Séquence == 14) {
+            document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+            document.getElementById('texte_area').innerHTML = ". . .";
+            document.getElementById('Position_droite').style.width = "30%";
+            document.getElementById('texte_area').style.fontSize = "30px";
+        }
+        if (Séquence == 15) {
+            document.getElementById('Position_droite').src = "Images/Personage/Capitaine_Stickgloo_normal.png"
+            document.getElementById('texte_area').innerHTML = "Donc je disais. Vous y vivrez comme un étudiant lambda et en cohabitation avec les autres élèves afin qu'ils puissent s'habituer à votre espèce dans le cas d'une future colonisation.";
+        }
+        if (Séquence == 16) {
+            document.getElementById('icone').src = "Images/Personage/Nathan.png"
+            document.getElementById('icone').style.witdh="280px";
+            document.getElementById('icone').style.height="280px";
+            document.getElementById('icone').style.marginLeft="100px";
+            document.getElementById('icone').style.marginTop="115px";
+            document.getElementById('texte_area').innerHTML = "En gros vous êtes en train de me dire que vous m'avez kidnapper dans le but de m'utiliser comme sujet d'étude pour votre école bizzare de colonisateurs.";
+            document.getElementById('texte_area').style.color = "darkred";
+            document.getElementById('nom').innerHTML = "Héros-kun";
+        }
+        if (Séquence == 17) {
+            document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+            document.getElementById('Position_droite').src = "Images/Personage/Capitaine_Stickgloo_fascinner.png"
+            document.getElementById('texte_area').innerHTML = "C'est exact. Et il nous reste quelques heures avant d'arriver sur la planète Oq1_budj&, un membre du vaisseau va vous amenez à votre cabine où vous pourrez vous reposer.";
+            document.getElementById('texte_area').style.color = "blue";
+            document.getElementById('nom').innerHTML = "Capitaine Stickgloo";
+        }
+        if (Séquence == 18) {
+            document.getElementById('icone').src = "Images/Personage/Nathan.png"
+            document.getElementById('icone').style.witdh="280px";
+            document.getElementById('icone').style.height="280px";
+            document.getElementById('icone').style.marginLeft="100px";
+            document.getElementById('icone').style.marginTop="115px";
+            document.getElementById('texte_area').innerHTML = "Euh. . . Bah. . . Ok, très bien!";
+            document.getElementById('texte_area').style.color = "darkred";
+            document.getElementById('nom').innerHTML = "Héros-kun";
+        }
+        if (Séquence == 19) {
+            document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+            document.getElementById('Position_droite').src = "Images/Personage/Capitaine_Stickgloo_normal.png"
+            document.getElementById('texte_area').innerHTML = "Profitez bien du voyage !";
+            document.getElementById('texte_area').style.color = "blue";
+            document.getElementById('nom').innerHTML = "Capitaine Stickgloo";
+        }
+        if (Séquence == 20) {
+            document.body.style.backgroundImage = "url('Images/bed.png')"
+            document.getElementById('icone').src = "Images/Personage/Nathan.png"
+            document.getElementById('icone').style.witdh="280px";
+            document.getElementById('icone').style.height="280px";
+            document.getElementById('icone').style.marginLeft="100px";
+            document.getElementById('icone').style.marginTop="115px";
+            document.getElementById('texte_area').innerHTML = "Bon. . . Je n'ai aucune idée de ce qu'il se passe concrètement donc on va pas se poser plus de question et on va dormir. je devrais avoir les idées plus claire après avoir dormi un peu.";
+            document.getElementById('texte_area').style.color = "darkred";
+            document.getElementById('nom').innerHTML = "Héros-kun";
+            document.getElementById('Position_droite').hidden = true;
+        }
+        if (Séquence == 21) {
+            document.location = "chapitre_1.html"
+        }
+        Séquence += 1;
+    }
+</script>
+</html>

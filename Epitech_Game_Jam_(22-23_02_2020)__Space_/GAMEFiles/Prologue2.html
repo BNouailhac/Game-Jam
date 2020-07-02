@@ -1,0 +1,117 @@
+<html lang="fr">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <link href="game.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Moi, Héroïne-Chan quand je me fais kidnapper par des hommes bâtons colonisateur alors que je suis une fille lambda</title>
+
+</head>
+
+<body>
+        <audio autoplay loop id="playAudio">
+                <source src="Audio/cipher.mp3">
+            </audio>
+    <!-- Séquence 4 choix player-->
+    <div id="question" hidden="true">
+            <audio src="Audio/fusion.mp3" id="voice"></audio>
+        <h1 style="color: #fff; background-color: #007bff; border-color: #007bff;text-align: center;">Dans cette situation:</h1>
+        <button class="button" onclick="Réponse('A')" style="height: 10%; bottom: 60%; left:10%; position: absolute;">Réponse A: Je saute la tête la première</button>
+        <button class="button" onclick="Réponse('B')" style="height: 10%; bottom: 40%; left:5%; position: absolute;">Réponse B: Je tente de courir désespérement dans le sens inverse du rayon</button>
+        <button class="button" onclick="Réponse('C')" style="height: 10%; bottom:60%; right:18%; text-align: center; position: absolute;">Réponse C: Je pleure</button>
+        <button class="button" onclick="Réponse('D')" style="height: 10%; bottom:40%;right:10%; position: absolute;">Réponse D: Je pleure et je me chie dessus</button>
+    </div>
+
+    <!-- personage sur l'écran à gauche ou a droite-->
+    <img id="Position_gauche" hidden="true" style="position: absolute; width: 15%; margin-right: 100px; top: 100px; left:150px; z-index: 0;" src="">
+    <img id="Position_droite" hidden="true" style="position: absolute; width: 15%; margin-right: 100px; top: 100px; right:150px; z-index: 0;" src="">
+
+    <img id="rayon" hidden="true" style="width: 100%; height: 100%; position: absolute; z-index: -1;"  src="Images/rayon_trakteur.png">
+
+    <div onclick="Game()" class="fixed-bottom" id="dialogDiv">
+        <img id="icone" style="margin-left: 80px; margin-top: 60px; width: 250px; height: 300px; position: absolute;" src="Images/Personage/Siyam.png">
+        </img>
+        <p id="nom" style="color:black; position: absolute; left:20%; top:24%; z-index:200">
+                Héroïne-Chan
+        </p>
+        <p id="texte_area" style="position: absolute; left:30%; top:44%; z-index:200">
+                Salut ! Je m'appelle Héroïne-Chan, PERSONNE ne me résiste !
+        </p>
+    </div>
+</body>
+
+<script>
+    function Réponse(réponse) {
+        document.getElementById('question').hidden = true
+        if (réponse == 'A') {
+            document.getElementById('icone').src="Images/Personage/Siyam.png";
+            document.getElementById('icone').style.marginLeft="80px";
+            document.getElementById('icone').style.marginTop="60px";
+            document.getElementById('icone').style.width="250px";
+            document.getElementById('icone').style.height="300px";
+            document.getElementById('dialogDiv').hidden = false
+            document.getElementById('texte_area').innerHTML = "Moi j'ai peur de rien";
+        }
+        if (réponse == 'B') {
+            document.getElementById('icone').src="Images/Personage/Siyam.png";
+            document.getElementById('icone').style.marginLeft="80px";
+            document.getElementById('icone').style.marginTop="60px";
+            document.getElementById('icone').style.width="250px";
+            document.getElementById('icone').style.height="300px";
+            document.getElementById('dialogDiv').hidden = false
+            document.getElementById('texte_area').innerHTML = "Je me fais quand même emportée";
+        }
+        if (réponse == 'C') {
+            document.getElementById('icone').src="Images/Personage/Siyam.png";
+            document.getElementById('icone').style.marginLeft="80px";
+            document.getElementById('icone').style.marginTop="60px";
+            document.getElementById('icone').style.width="250px";
+            document.getElementById('icone').style.height="300px";
+            document.getElementById('dialogDiv').hidden = false
+            document.getElementById('texte_area').innerHTML = "Je me met à pleurer mais le rayon m'emporte quand même";
+        }
+        if (réponse == 'D') {
+            document.getElementById('icone').src="Images/Personage/Siyam.png";
+            document.getElementById('icone').style.marginLeft="80px";
+            document.getElementById('icone').style.marginTop="60px";
+            document.getElementById('icone').style.width="250px";
+            document.getElementById('icone').style.height="300px";
+            document.getElementById('dialogDiv').hidden = false
+            document.getElementById('texte_area').innerHTML = "Qu'est-ce qu'il m'a prit... -_-";
+        }
+    }
+
+    var Séquence = 1;
+    function Game() {
+        if (Séquence == 1) {
+            document.getElementById('texte_area').innerHTML = "Ma vie se résume simplement à aller à l'école et écouter des profs déblatérer des cours sans interêt avec des élèves plus stupides les uns que les autres.";
+        }
+        if (Séquence == 2) {
+            document.getElementById('texte_area').innerHTML = "Là je rentre chez moi et tout ce dont je rêve c'est d'un bon bain et de mon lit.";
+        }
+        if (Séquence == 3) {
+            document.getElementById('icone').src = "Images/Personage/Siyam_perdu.png";
+            document.getElementById('icone').style.marginLeft="70px";
+            document.getElementById('icone').style.marginTop="80px";
+            document.getElementById('icone').style.width="250px";
+            document.getElementById('icone').style.height="250px";
+            document.getElementById('rayon').hidden = false
+            document.getElementById('texte_area').innerHTML = "Mais qu'est ce que . . ?";
+        }
+        if (Séquence == 4) {
+            document.getElementById('playAudio').muted = true;
+            document.getElementById('voice').autoplay = true;
+            document.getElementById('dialogDiv').hidden = true
+            document.getElementById('question').hidden = false
+        }
+        if (Séquence == 5) {
+            document.location = "Prologue_vaisseaux2.html"
+        }
+        Séquence += 1;
+    }
+</script>
+</html>

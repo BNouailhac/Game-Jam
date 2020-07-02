@@ -1,0 +1,147 @@
+<html lang="fr">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <link href="game.css" rel="stylesheet">
+    <link href="chapitre_1.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chapitre 1</title>
+
+</head>
+
+<body style="background-image: url('Images/bed.png');">
+    <audio autoplay loop id="playAudio">
+            <source src="Audio/cipher.mp3">
+        </audio>
+    <!-- Séquence 4 choix player-->
+    <div id="question" hidden="true">
+        <h1 class="button" style="bottom: 80%; left:32%;border-radius:0px ; background-color: whitesmoke; position: absolute;">"Ha bonjour ! Comment allez vous ?"</h1>
+        <button class="button" onclick="Réponse('A')" style="height: 12% ; width: 25%; bottom: 65%; left:38%; position: absolute;">Ça ne vous regarde pas</button>
+        <button class="button" onclick="Réponse('B')" style="height: 12%; width: 25%; bottom: 50%; left:38%; position: absolute;">Plutot bien a vrai dire</button>
+        <button class="button" onclick="Réponse('C')" style="height: 12%; width: 25%; bottom:35%; left:38%; text-align: center; position: absolute;">J'ai rêvé de vous cette nuit...</button>
+    </div>
+
+    <!-- personage sur l'écran à gauche ou a droite-->
+    <img id="Position_gauche" hidden="true" style="position: absolute; width: 30%; margin-right: 100px; top: 100px; left:150px; z-index: 0;" src="">
+    <img id="Position_droite" hidden="true" style="position: absolute; width: 15%; margin-right: 100px; top: 100px; right:150px; z-index: 0;" src="">
+
+    <div onclick="Game()" class="fixed-bottom" id="dialogDiv">
+        <img id="icone" style="margin-left: 80px; margin-top: 60px; width: 250px; height: 300px; position: absolute;" src="Images/Personage/Siyam.png">
+        </img>
+        <p id="nom" style="color:black; position: absolute; left:20%; top:24%; z-index:200">
+                Héroïne-Chan
+        </p>
+        <p id="texte_area" style="text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px; position: absolute; left:30%; top:44%; z-index:200">
+            Je viens enfin de me réveiller mais je n'ai aucune idée de l'heure qu'il est actuellement
+        </p>
+    </div>
+</body>
+
+<script>
+    function Réponse(réponse) {
+        document.getElementById('question').hidden = true
+        document.getElementById('texte_area').style.color = "darkred";
+        document.getElementById('dialogDiv').hidden = false         
+        document.getElementById('icone').src = "Images/Personage/Siyam.png";
+        document.getElementById('nom').innerHTML = "Héroïne-Chan";
+        document.getElementById('texte_area').style.color = "darkred";
+        if (réponse == 'A') {
+            document.getElementById('texte_area').innerHTML = "Ça ne vous concerne pas";
+            document.getElementById('icone').src = "Images/Personage/Siyam_colere.png";
+        }
+        if (réponse == 'B') {
+            document.getElementById('texte_area').innerHTML = "Plutôt bien à vraie dire";
+        }
+        if (réponse == 'C') {
+            document.getElementById('texte_area').innerHTML = "J'ai rêvé de vous cette nuit. . .";
+            document.getElementById('icone').src = "Images/Personage/Siyam_sexy.png";
+            document.getElementById('icone').style.marginLeft="70px";
+            document.getElementById('icone').style.marginTop="80px";
+            document.getElementById('icone').style.width="250px";
+            document.getElementById('icone').style.height="250px";
+        }
+        str_réponse = réponse;
+    }
+
+    var Séquence = 1;
+    var str_réponse = 0;
+    function Game() {
+        if (Séquence == 1) {
+            document.getElementById('Position_gauche').hidden = false
+            document.getElementById('nom').innerHTML = "Capitaine Stickgloo";
+            document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+            document.getElementById('Position_gauche').src = "Images/Personage/Capitaine_Stickgloo_normal.png"
+            document.getElementById('texte_area').innerHTML = "Ha bonjour ! Comment allez vous ?";
+            document.getElementById('texte_area').style.color = "blue";
+        }
+        if (Séquence == 2) {
+            document.getElementById('dialogDiv').hidden = true
+            document.getElementById('question').hidden = false
+        }
+        if (Séquence == 3) {
+            document.getElementById('nom').innerHTML = "Capitaine Stickgloo";
+            document.getElementById('texte_area').style.color = "blue";
+            document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+            if (str_réponse == 'A') {
+                document.getElementById('Position_gauche').src = "Images/Personage/Capitaine_Stickgloo_venere.png"
+                document.getElementById('texte_area').innerHTML = "Je vois que vous n'êtes pas encore prêt à collaborer";
+            }
+            if (str_réponse == 'B') {
+                document.getElementById('texte_area').innerHTML = "Vous avez accepté votre sort à ce que je vois. Tant mieux, cela évite les complications";
+            }
+            if (str_réponse == 'C') {
+                document.getElementById('Position_gauche').src = "Images/Personage/Capitaine_Stickgloo_Kawaii.png"
+                document.getElementById('texte_area').innerHTML = "Ho vous alors vous me flattez, mais je vous préviens je ne suis pas un stickman facile";
+            }
+        }
+        if (Séquence == 4) {
+            document.getElementById('icone').src = "Images/Personage/Siyam.png";
+            document.getElementById('icone').style.marginLeft="80px";
+            document.getElementById('icone').style.marginTop="60px";
+            document.getElementById('icone').style.width="250px";
+            document.getElementById('icone').style.height="300px";
+            document.getElementById('nom').innerHTML = "Héroïne-Chan";
+            document.getElementById('texte_area').style.color = "darkred";
+            if (str_réponse == 'A') {
+                document.getElementById('texte_area').innerHTML = "Comment voulez-vous que je reste calme ! Vous m'avez kidnappé je vous rappelle";
+                document.getElementById('icone').src = "Images/Personage/Siyam_colere.png";
+            }
+            if (str_réponse == 'B') {
+                document.getElementById('texte_area').innerHTML = "En même temps, je ne peux rien faire d'autre. Protester ne me servirais en rien";
+            }
+            if (str_réponse == 'C') {
+                document.getElementById('nom').innerHTML = "Capitaine Stickgloo";
+                document.getElementById('texte_area').style.color = "blue";
+                document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+                document.getElementById('texte_area').innerHTML = "Bon il suffit ! à vrai dire je viens vous voir pour vous convier à mon bureau, je dois mener un interrogatoire sur vous.";
+            }
+        }
+        if (Séquence == 5) {
+            document.getElementById('icone').src = "Images/Personage/Capitaine_Stickgloo_Icone.png"
+            document.getElementById('nom').innerHTML = "Capitaine Stickgloo";
+            document.getElementById('texte_area').style.color = "blue";
+            if (str_réponse == 'A') {
+                document.getElementById('texte_area').innerHTML = "Soyez concient que dorenavent votre vie appartient au peuple Stickman";
+            }
+            if (str_réponse == 'B') {
+                document.getElementById('texte_area').innerHTML = "Tout-à-fait votre sort est maintenant entre nos mains";
+            }
+            if (str_réponse == 'C') {
+                document.location = "chapitre_2G_2.html"
+            }
+        }
+        if (Séquence == 6) {
+            document.getElementById('Position_gauche').src = "Images/Personage/Capitaine_Stickgloo_normal.png"
+            document.getElementById('texte_area').innerHTML = "Bon il suffit, à vrai dire je viens vous voir pour vous inviter dans mon bureau je dois mener un interrogatoire sur vous.";
+        }
+        if (Séquence == 7) {
+            document.location = "chapitre_2G_2.html"
+        }
+        Séquence += 1;
+    }
+</script>
+</html>

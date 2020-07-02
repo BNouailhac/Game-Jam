@@ -1,0 +1,50 @@
+body {
+    background-color:white;
+    background-image:url("Images/Ville de nuit.png");
+	background-repeat:no-repeat;
+    font-family: 'Poiret One';
+    background-attachment: fixed;
+    font-size: 30px;
+    z-index: -1;
+    background-size: 100% 100%;
+}
+
+button:hover
+{
+	text-shadow:0px 0px 8px white;
+	background:rgba(151, 128, 255, 0.4);
+}
+
+p {
+	margin: 20px;
+    font-size: 30px;
+    color: darkred;
+    text-shadow: #000000 1px 1px, #000000  -1px 1px, #000000  -1px -1px, #000000 1px -1px;
+}
+
+html{overflow:hidden}
+
+#novelDiv {
+    width: 1250px;
+    height: 700px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+
+#dialogDiv {
+    font-size: 20px;
+    object-position: bottom;
+    width: 100%;
+    height: 40%;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url("Images/text_box.png");
+    background-size: 100% 100%;
+    color: darkred;
+    text-align: left;
+    filter: alpha(opacity=90);
+    opacity: 0.75;
+}
