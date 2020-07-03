@@ -2,7 +2,7 @@ Here is the result of the Epitech Game Jam made between the 23/02 and the 24/02 
 the theme was "space".
 
 We were 4 students to make this game and we decided to make a visual novel video game playable in browser with your mouse.
-The game have an 20 minute play-time and is only in french. my work on this project was to make the scripts who handle the choices of the player.
+The game have an 10 minute play-time and is only in french. my work on this project was to make the scripts who handle the choices of the player.
 
 to launch the game open the file "私、ヒーローくんは、私が典型的な男である間に棒人間を植民地化することによって誘nされたとき" in your favorite browser (
 the most recommended is firefox)
