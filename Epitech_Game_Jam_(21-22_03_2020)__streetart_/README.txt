@@ -8,8 +8,8 @@ to launch the game execute "Les hommes du tableaux.exe"
 
 here some pictures of the game:
 
-![Main Menu](https://github.com/BNouailhac/Game-Jam/blob/master/Epitech_Game_Jam_(21-22_03_2020)__streetart_/GAMEFiles/ImageGit/Capture%20du%202020-07-02%2018-33-47.png)
+![Main Menu](https://raw.githubusercontent.com/BNouailhac/Game-Jam/master/Epitech_Game_Jam_(21-22_03_2020)__streetart_/Image_Git/Capture.PNG)
 
-![Picture in game](https://github.com/BNouailhac/Game-Jam/blob/Epitech_Game_Jam_(21-22_03_2020)__streetart_/GAMEFiles/ImageGit/Capture%20du%202020-07-02%2018-34-08.png)
+![Intro](https://github.com/BNouailhac/Game-Jam/blob/master/Epitech_Game_Jam_(21-22_03_2020)__streetart_/Image_Git/Capture2.PNG)
 
-![Picture in game](https://github.com/BNouailhac/Game-Jam/blob/master/Epitech_Game_Jam_(21-22_03_2020)__streetart_/GAMEFiles/ImageGit/Capture%20du%202020-07-02%2018-34-30.png)
+![Picture in game](https://github.com/BNouailhac/Game-Jam/blob/master/Epitech_Game_Jam_(21-22_03_2020)__streetart_/Image_Git/Capture3.PNG)
