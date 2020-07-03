@@ -9,7 +9,7 @@ We made this game with unity, it was our first game create with.
 
 to launch the game execute "Les hommes du tableaux.exe"
 
-here some pictures of the game:
+here some pictures in game:
 
 ![Main Menu](https://raw.githubusercontent.com/BNouailhac/Game-Jam/master/Epitech_Game_Jam_(21-22_03_2020)__streetart_/Image_Git/Capture.PNG)
 
