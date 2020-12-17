@@ -11,8 +11,8 @@ to launch the game execute "Les hommes du tableaux.exe"
 
 here some pictures in game:
 
-![Main Menu](https://raw.githubusercontent.com/BNouailhac/Game-Jam/master/Epitech_Game_Jam_(21-22_03_2020)__streetart_/Image_Git/Capture.PNG)
+![Main Menu](https://raw.githubusercontent.com/BNouailhac/Game-Jam/master/Streetart%20Unity%20Game%20Jam/Image_Git/Capture.PNG)
 
-![Intro](https://github.com/BNouailhac/Game-Jam/blob/master/Epitech_Game_Jam_(21-22_03_2020)__streetart_/Image_Git/Capture2.PNG)
+![Intro](https://github.com/BNouailhac/Game-Jam/blob/master/Streetart%20Unity%20Game%20Jam/Image_Git/Capture2.PNG)
 
-![Picture in game](https://github.com/BNouailhac/Game-Jam/blob/master/Epitech_Game_Jam_(21-22_03_2020)__streetart_/Image_Git/Capture3.PNG)
+![Picture in game](https://github.com/BNouailhac/Game-Jam/blob/master/Streetart%20Unity%20Game%20Jam/Image_Git/Capture3.PNG)
